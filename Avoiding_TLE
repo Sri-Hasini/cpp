@@ -1,0 +1,18 @@
+//TLE mainly occurs when we run a loop greater than having 10 power 6 value
+// so if the constraints are given more than that... we can use built-in functions 
+//EG:
+//for sorting ....
+for(int j=0;j<x;j++){
+                for(int k=0;k<x - j - 1;k++){
+                    if(a[k]>a[k+1]){
+                        temp=a[k];
+                        a[k]=a[k+1];
+                        a[k+1]=temp;
+                    }
+                }
+            } 
+//this is the logic by using loops... and they had given x <= 10 power 8
+//but... as there are 2 loops running one loop have 10 power 8 and another loop have 10 power 8... so total 10 power 16... 
+//but we have TLE when exceeds 10 power 6
+//so we can replace it as 
+sort(c, c+x);
