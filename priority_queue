@@ -1,0 +1,29 @@
+/*              priority_queue
+the element which has largest priority stays at the top
+a tree ds is maintained inside 
+it is arranged as descending order from top to bottom
+if we print top() then the max element is printed i.e., the first element
+if we wanna store in ascending order the syntax is 
+--> priority_queue<int, vector<int>, greater<int>> pq;
+*/
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    //maximum pq
+    priority_queue <int> pq;
+    pq.push(5);//{5}
+    pq.push(3);//{5,3}
+    pq.push(10);//{10,5,3}
+    cout<<pq.top()<<endl;//10
+    pq.pop();
+    cout<<pq.top()<<endl;//5
+    
+    //minimum pq
+    priority_queue<int, vector<int>, greater<int>> pq1;
+    pq1.push(5);//{5}
+    pq1.push(3);//{3,5}
+    pq1.push(10);//{3,5,10}
+    cout<<pq1.top()<<endl;//3
+    pq1.pop();
+    cout<<pq1.top()<<endl;//5
+}
