@@ -1,0 +1,14 @@
+/*                  Set
+it stores elements in sorted order and unique
+tree is maintained inside
+takes log n time complexity
+insert(), emplace() used to push elements into set
+.find(element) is used to find the address of that element 
+--> auto it=st.find(3) //{1,2,3,4,5} so it returns the address to an iterator
+if the element is not found like .find(6) then it returns the st.end() the address just after the last element
+-->int cnt=st.count(5) it returns 1 or 0 if 5 is there in set returns 1 orelse 0(as the set is unique)
+.erase(element) or .erase(iterator) used to erase an element 
+.erase(start,end) need to give iterators 
+-->st.erase(st.begin(),st.end()) [start,end)
+auto it =lower_bound(element) (or) upper_bond(element)
+*/
