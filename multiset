@@ -1,0 +1,31 @@
+/*                          multiset
+it is just like set but stores multiple occurences of elements 
+have redundancy
+it is also in sorted order
+we can insert elements and if we wanna erase them.... like
+-->ms.erase(1) //{1,1,1,2,3} then it erases all occurances of 1
+-->ms.count(1) //3
+ we can erase particular element like
+-->ms.erase(ms.find(1))// find() will only send the address of 1st occurance of that element and sent to erase, so it get erased based on address 
+we can also erase 2 ,3,4.... occurances also by giving like
+-->ms.erase(ms.find(1),ms.find(1)+2) it will erase 2 occurances as the it means [1st,2nd,3rd occurance) so 3rd is not included
+*/
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    multiset<int> ms;
+    ms.insert(10);
+    ms.insert(20);
+    ms.insert(10);
+    ms.insert(30);
+    ms.insert(10);
+    ms.insert(10);
+    cout<<ms.count(10)<<endl;//4
+    ms.erase(ms.find(10));
+    cout<<ms.count(10)<<endl;//3
+    //ms.erase(ms.find(10),ms.find(10)+2);
+    for(auto it:ms){
+        cout<<it<<endl;//10,10,10,20,30
+    }
+}
