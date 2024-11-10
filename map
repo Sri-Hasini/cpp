@@ -1,0 +1,24 @@
+/*              map
+it stores key value pairs and have unique keys
+it stores in sorted order of keys 
+key can be any datatype and value also can be anything
+map<int,int> m;
+map< pair<int,int>, int>m1;
+m[{8,9}]=10;
+m[1]=2; (or) m.emplace({3,2}); (or) m.insert({4,3}); for storing
+
+we iterate it and it stores like a pair and accessed like a pair
+for(auto it:m){
+    //it takes {1,2} as a pair and first ,second is used to call them
+    cout<<it.first<<" "<<it.second<<endl;
+}
+if we access m[1] then it prints the value corresponding to that key like 2
+if no key is available it prints 0
+
+if we want to know the address and then access 
+-->auto it=m.find(3);
+-->cout<<*(it).second;
+this is used to access the corresponding element of that key using iterator
+-->auto it=m.find(5);//if not there it points to m.end()
+
+*/
