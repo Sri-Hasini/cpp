@@ -1,0 +1,6 @@
+/*          unordered_map
+everything is same as multimap but here we can store duplicate keys
+O(1) here but in map it works as log n
+unsorted order
+
+*/
