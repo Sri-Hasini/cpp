@@ -9,16 +9,16 @@ if we wanna store in ascending order the syntax is
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    //maximum pq
+    //maximum pq = max heap
     priority_queue <int> pq;
-    pq.push(5);//{5}
+    pq.push(5);//{5} --> log n
     pq.push(3);//{5,3}
     pq.push(10);//{10,5,3}
-    cout<<pq.top()<<endl;//10
-    pq.pop();
+    cout<<pq.top()<<endl;//10 --> O(1)
+    pq.pop(); --> log n
     cout<<pq.top()<<endl;//5
     
-    //minimum pq
+    //minimum pq = min heap
     priority_queue<int, vector<int>, greater<int>> pq1;
     pq1.push(5);//{5}
     pq1.push(3);//{3,5}
