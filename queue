@@ -1,0 +1,21 @@
+ /*                     Queue
+ FIFO
+ push() pushes an element 
+ pop() pops an element which is at front
+ back() returns last element
+ front() returns first element
+ size(), swap(), empty() etc are same as stack
+ */
+ #include<bits/stdc++.h>
+ using namespace std;
+ int main(){
+     queue <int> q;
+     q.push(10);
+     q.push(20);
+     q.emplace(30);
+     q.back()+=9;
+     cout<< q.back()<<endl;//39
+     cout<<q.front()<<endl;//10
+     q.pop();
+     cout<<q.front()<<endl;//20
+ }
