@@ -1,0 +1,59 @@
+/*                      List
+List is same as vector but it gives front operations as well
+it allows non contingous memory allocation
+slow than List but once position has been found, insertion and deletion are quick
+it is a class of list container
+--> list<int> x{1,2,3,4};
+It is generally implemented using a dynamic doubly linked list with traversal in both directions and for vector single linked list and insert is costlier in vector whereas push_front is cheap here. 
+It provides only sequential access. Random Access to any middle element is not possible.
+it have push_back(), push_front(), emplace_back(), emplace_front() 
+and all functions begin(), end(), rbegin(), rend(), clear(), insert(), size(), swap() are similar like vector
+
+front() – Returns the value of the first element in the list.
+back() – Returns the value of the last element in the list.
+push_front() – Adds a new element ‘g’ at the beginning of the list.
+push_back() – Adds a new element ‘g’ at the end of the list.
+pop_front() – Removes the first element of the list, and reduces the size of the list by 1.
+pop_back() – Removes the last element of the list, and reduces the size of the list by 1.
+insert() – Inserts new elements in the list before the element at a specified position.
+size() – Returns the number of elements in the list.
+begin() – begin() function returns an iterator pointing to the first element of the list.
+end() – end() function returns an iterator pointing to the theoretical last element which follows the last element.
+*/
+#include <bits/stdc++.h>
+using namespace std;
+void showlist(list<int> g){
+    list<int>:: iterator it;
+    for(it=g.begin();it!=g.end();it++)
+    {
+        cout<<*it<<"\t";
+    }
+    cout<<endl;
+}
+
+int main() {
+    list <int> x;
+    x.push_back(10);
+    showlist(x);//{10}
+    x.push_front(20);
+    showlist(x);//{20,10}
+    x.emplace_back(30);
+    showlist(x);//{20,10,30}
+    x.emplace_front(40);
+    showlist(x);//{40,20,10,30}
+    cout << x.front() << " " << x.back()<<endl;//40 30
+    x.insert(x.begin(),3,5);
+    showlist(x);//{5,5,5,40,20,10,30}
+    x.remove(5);
+    showlist(x);//{40,20,10,30}
+    x.reverse();
+    showlist(x);//{30,10,20,40}
+    x.sort();
+    showlist(x);//{10,20,30,40}
+    cout<<x.empty()<<endl;//0
+    x.erase(x.begin());//iterator name.erase(iterator first, iterator last)
+    showlist(x);//{20,30,40}
+    cout<<x.empty()<<endl;//0
+    x.clear();
+    cout<<x.empty()<<endl;//1
+}
