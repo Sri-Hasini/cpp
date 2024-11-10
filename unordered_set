@@ -1,0 +1,7 @@
+/*          unordered_set
+it stores in a randomized order not in a sorted way
+unique elements
+maximum time complexity is O(1)
+all operations are same as set but dont have lower_bound and upper_bound doesnt work
+in worst case O(n)
+*/
