@@ -1,0 +1,6 @@
+/*          multimap
+everything is same as map but here we can store duplicate keys
+only map[key] cant be used here
+sorted order
+
+*/
