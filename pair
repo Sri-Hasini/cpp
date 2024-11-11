@@ -1,5 +1,5 @@
 /*              Pair
-pair can store 2 values {first,second} that can of different datatypes also
+pair can store 2 values {first,second} that can consist of different datatypes also
 pair is a simple container defined in <utility> header
 we can also store nested pairs like
 pair <int , pair<int,int>> p = {1, {2,3}};
