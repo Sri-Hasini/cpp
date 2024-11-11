@@ -1,13 +1,7 @@
 /*              Vector
---> An iterator in C++ is a pointer-like object that points to an element of the STL container.
-They are generally used to loop through the contents of the STL container in C++. 
-The main advantage of STL iterators is that they make the STL algorithms independent of the type of container used.
-We can just pass the iterator to the container elements instead of the container itself to the STL algorithms.
-In C++, iterators are used to access elements in containers (like vector, list, map, etc.). 
-They function like pointers, providing a way to navigate through the elements of a container. 
 
 vector comes into play to store elements dynamically in a similar way that array does .
-it is a container. it stores in contigous memory and we can insert or delete at the end 
+it is a container. it stores in contiguous memory and we can insert or delete at the end 
 we can declare like.. 
 --> vector <datatype> vname; // as soon as we write this, it creates an empty container {}
 vname.push_back(1);//it pushes 1 into that vector like {1}
@@ -23,6 +17,12 @@ vector <int> v4(v3); // this is used to copy v3 into v4
  
 we can write v[0] or v.at(0) to access an element at 0th index
 other way to access is "iterators"
+--> An iterator in C++ is a pointer-like object that points to an element of the STL container.
+They are generally used to loop through the contents of the STL container in C++. 
+The main advantage of STL iterators is that they make the STL algorithms independent of the type of container used.
+We can just pass the iterator to the container elements instead of the container itself to the STL algorithms.
+In C++, iterators are used to access elements in containers (like vector, list, map, etc.). 
+They function like pointers, providing a way to navigate through the elements of a container. 
 
 iterators points to the memory address not to the element, so in order to access anything from memory we use *
 --> <type>::iterator itname;//iterator syntax
