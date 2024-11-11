@@ -21,7 +21,7 @@ other way to access is "iterators"
 They are generally used to loop through the contents of the STL container in C++. 
 The main advantage of STL iterators is that they make the STL algorithms independent of the type of container used.
 We can just pass the iterator to the container elements instead of the container itself to the STL algorithms.
-In C++, iterators are used to access elements in containers (like vector, list, map, etc.). 
+In C++, iterators are used to access elements in containers using address (like vector, list, map, etc.). 
 They function like pointers, providing a way to navigate through the elements of a container. 
 
 iterators points to the memory address not to the element, so in order to access anything from memory we use *
