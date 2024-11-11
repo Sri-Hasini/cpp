@@ -1,0 +1,55 @@
+/*  algorithms
+1) sort(starting iterator,last iterator) [start,end)
+-->sort(v.begin(),v.end());
+sorting in descending order
+-->sort(a,a+n, greater<int>);//greater is an inbuilt comparator
+eg:sorting in some other fashion like
+-->pair<int,int> a[]={{1,2},{2,1},{4,1}};
+sort it according to second element
+if second element is same,
+then sort it according to first element but in descending
+//according to these conditions it will be sorted like
+{{4,1},{2,1},{1,2}}
+at this case we will write 
+-->sort(a,a+n,comp);//this is a self written comparator and it is a boolean fucntion , when we return false it will internally swap the pairs
+
+bool comp(pair<int,int> p1,pair<int,int>p2){
+    if(p1.second < p2.second)return true;
+    if(p1.second > p2.second)return false;
+    if(p1.first >p2.first) return true;
+    return false;
+}
+
+
+2)__builtin_popcount()
+it will return the number of set bits or 1's present in some binary format of given number
+eg: int num=7;//00000111
+int cnt=__built_popcount();//3
+
+3)__built_popcountll()
+eg: int num=14336456789354;
+int cnt=__built_popcountll();
+
+4)next_permutation()
+string s=231;
+sort(s.begin(),s.end());//sort it to print all the permutaions
+do{
+    cout<<s<<endl;
+}while(next_permutation(s.begin(),s.end()));//it returns null or false when there are no permutaions further
+o/p: 231
+    321
+    132
+    .
+    .
+    .
+
+5)max_element()
+it gives address so use *
+-->int maxi=*max_element(a,a+n);
+
+6)min_element()
+it gives address so use *
+-->int mini=*min_element(a,a+n);
+}
+*/
+
