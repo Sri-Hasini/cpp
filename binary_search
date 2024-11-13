@@ -1,6 +1,7 @@
-/*
+/*                                     iterative binary_search
 linear search -> searched from starting to last 
 binary search -> it will search on a sorted one by dividing or  splitting until we find...
+time complexity is O(log N)
 eg: -we will fix the starting point as 'low' and ending point as 'high' and calculate 'mid'
     -on the next step we will check whether mid == target
     -if we found then we will break
