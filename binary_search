@@ -10,6 +10,14 @@ eg: -we will fix the starting point as 'low' and ending point as 'high' and calc
     -if it is high then we will make low=mid+1
     -we will continue this process until low<=high
     -if we didnt find it we will print -1
+
+overflow problem here is:
+    the high may be INT_MAX which may overflow to calculate mid i.e;
+    mid=(INT_MAX + INT_MAX)/2;
+    here integer mid cant store that much value which is 2*INT_MAX
+    so the solution here is 
+    --> use long long instead of int
+    --> perform mid = low +(high-low)/2;
 */
 
 #include <bits/stdc++.h>
