@@ -21,4 +21,9 @@ if we want to know the address and then access
 this is used to access the corresponding element of that key using iterator
 -->auto it=m.find(5);//if not there it points to m.end()
 
+//used to find the occurance of elements (frequency)
+map<int,int>freq;
+        for(auto i:nums1){
+            freq[i]++;
+        }
 */
