@@ -64,6 +64,10 @@ v1.swap(v2) swaps elements from v1 to v2 and v2 to v1
 .clear() erases the entire vector and make it as empty one
 
 .empty() if vector has atleast one element it returns false if it doesnt have any elements it says true
+
+nums1.erase(remove(nums1.begin(), nums1.end(), 0), nums1.end());//keeps like {1,2,2,3,3,5,0,0,0} then erase will remove all the 0's and stores like {1,2,2,3,3,5}
+    //remove rearranges all 0's to end and return the range iterator to erase and erase will physically erases those elements in that range
+
 */
 #include <bits/stdc++.h>
 using namespace std;
